@@ -1,5 +1,4 @@
-double
-double
-toil+
+send
+more+
 -----
-trouble
+money
