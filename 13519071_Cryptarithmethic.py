@@ -1,6 +1,5 @@
 from time import time
 
-
 # PERMUTASI
 def permutation(lst):
     if len(lst) == 0:
@@ -10,10 +9,10 @@ def permutation(lst):
     else:
         perm = []
         for i in range(len(lst)):
-            m = lst[i]
+            l = lst[i]
             tail = lst[:i] + lst[i + 1:]
-            for p in permutation(tail):
-                perm.append([m] + p)
+            for per in permutation(tail):
+                perm.append([l] + per)
     return perm
 
 
