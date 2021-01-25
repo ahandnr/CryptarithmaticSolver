@@ -118,6 +118,7 @@ def main():
     awal1 = time()
     if not read():
         return
+    print("Mencari solusi, silahkan tunggu...\n")
     # membuat array unik berisi huruf-huruf dari semua operator dan jawaban
     huruf = []
     for string in Op:
