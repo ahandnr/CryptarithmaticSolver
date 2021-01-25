@@ -1,4 +1,5 @@
-send
-more+
+no
+gun
+no+
 -----
-money
+hunt

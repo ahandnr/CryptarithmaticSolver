@@ -35,17 +35,24 @@ def permrange(lst, r):
 # READ FROM FILE
 def read():
     global Op
+
     file1 = open('soal.txt', 'r')
     Op = file1.readlines()
+    if len(Op) < 4: # asumsi garis pembatas selalu ada
+        print("Soal setidaknya memiliki 2 operan,garis pembatas, dan 1 jawaban, silahkan perbaiki.")
+        return False
 
     # hapus \n
     for i in range(len(Op)):
         Op[i] = Op[i].strip()
+        if Op[i] == '':
+            print("Soal tidak boleh memiliki baris kosong, silahkan perbaiki.")
+            return False
     # hapus elemen ----- di array
     Op.pop(len(Op) - 2)
     Op[len(Op) - 2] = Op[len(Op) - 2].replace('+', '')
 
-
+    return True
 # PRINT PERSAMAAN
 def print_persamaan(ophuruf, opangka):
     jarak = len(max(ophuruf, key=len))
@@ -108,8 +115,9 @@ def arrnum_to_num(arr):
 
 
 def main():
-    read()  # load file ke array Op
-
+    awal1 = time()
+    if not read():
+        return
     # membuat array unik berisi huruf-huruf dari semua operator dan jawaban
     huruf = []
     for string in Op:
@@ -123,7 +131,7 @@ def main():
 
     # Menginisialisasi jumlahtes dan waktu awal
     jumlahtes = 0
-    awal = time()
+    awal2 = time()
 
     # mengecek satu-persatu list permutasi
     for lst in list(perm):
@@ -154,7 +162,9 @@ def main():
                 print()
                 akhir = time()
                 print("\nJumlah tes :", jumlahtes)
-                print("Waktu :", (akhir - awal), "detik")
+                print("Waktu :", (akhir - awal2), "detik")
+                print()
+                print("Waktu Total:", (akhir - awal1), "detik")
                 print()
 
     print("Finished")
