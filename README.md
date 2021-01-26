@@ -1,10 +1,18 @@
-# CryptarithmaticSolver
-Cara Pakai :
-Tuliskan soal pada file 'soal.txt', pastikan sesuai format.
-Format :
+# CryptarithmeticSolver
+Program CryptarithmaticSolver merupakan program yang dapat memecahkan teka-teki crpytarithmetic. Program ini dibuat menggunakan bahasa python 3.  
+Program bisa dijalankan apabila perangkat sudah terinstall python 3.  
+Cara Penggunaan :
+1. Buka program, lalu masukkan nama file test yang akan dipilih, pastikan file sesuai format dan berada pada folder test.  
+2. Tunggu sampai solusi keluar, selesai.  
+Format file test:
   1. Jangan ada spasi setelah baris
   2. Jangan ada enter setelah baris terakhir
   3. Tulis '+' setelah operan terakhir
   4. Pastikan tidak ada campuran huruf kecil dan huruf kapital, silahkan pilih salah satu.
   5. Baris kedua terakhir merupakan '-------'
-Format yang sesuai ada pada soal.txt
+  6. Berekstensi .txt  
+  
+  
+  Made by:  
+  Farhan Nur Hidayat Denira  
+  13519071
