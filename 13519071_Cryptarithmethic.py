@@ -2,17 +2,20 @@ from time import time
 
 # PERMUTASI
 def permutation(lst):
+    # basis
     if len(lst) == 0:
         perm = []
     elif len(lst) == 1:
         perm = [lst]
+    # rekurens
     else:
         perm = []
+        # cari permutasi lst
         for i in range(len(lst)):
-            l = lst[i]
             tail = lst[:i] + lst[i + 1:]
+            # permutasi dgn first elmt lst[i]
             for per in permutation(tail):
-                perm.append([l] + per)
+                perm.append([lst[i]] + per)
     return perm
 
 
